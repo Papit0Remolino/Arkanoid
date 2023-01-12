@@ -14,6 +14,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI win;
     [SerializeField] GameObject[] bloques = new GameObject[6];
     [SerializeField] GameObject raqueta;
+    public int points;
+    public TextMeshProUGUI pointsText;
+    public HighScore highScore;
+    public TextMeshProUGUI highScoreText;
     public int lives = 3;
     // Start is called before the first frame update
     private void Awake()
@@ -24,7 +28,11 @@ public class GameManager : MonoBehaviour
         }
         
     }
-    
+    private void Start()
+    {
+        highScoreText.text = "HighScore: " + highScore.highScore.ToString();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
