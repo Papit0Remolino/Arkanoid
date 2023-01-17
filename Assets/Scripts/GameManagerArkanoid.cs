@@ -5,9 +5,9 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManagerArkanoid : MonoBehaviour
 {
-    public static GameManager sharedInstance = null;
+    public static GameManagerArkanoid sharedInstance = null;
 
     public Image live1, live2, live3;
     [SerializeField] TextMeshProUGUI gameOver;
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
                     bloques[i].AddComponent<Rigidbody2D>();
                 }
                 raqueta.GetComponent<BoxCollider2D>().enabled = false;
-                raqueta.GetComponent<RacketMovement>().enabled = false;
+                raqueta.GetComponent<RacketMovementArkanoid>().enabled = false;
                 break;
             default:
                 // si quieres añadir mas vidas aqui esta el problema

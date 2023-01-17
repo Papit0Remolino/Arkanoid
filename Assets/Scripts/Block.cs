@@ -12,12 +12,12 @@ public class Block : MonoBehaviour
             durability--;
             if (durability <= 0)
             {
-                GameManager.sharedInstance.points += 5;
-                GameManager.sharedInstance.pointsText.text = "Score: " + GameManager.sharedInstance.points.ToString();
-                if (GameManager.sharedInstance.points > GameManager.sharedInstance.highScore.highScore) 
+                GameManagerArkanoid.sharedInstance.points += 5;
+                GameManagerArkanoid.sharedInstance.pointsText.text = "Score: " + GameManagerArkanoid.sharedInstance.points.ToString();
+                if (GameManagerArkanoid.sharedInstance.points > GameManagerArkanoid.sharedInstance.highScore.highScore) 
                 {
-                    GameManager.sharedInstance.highScore.highScore = GameManager.sharedInstance.points;
-                    GameManager.sharedInstance.highScoreText.text = "HighScore: " + GameManager.sharedInstance.points.ToString();
+                    GameManagerArkanoid.sharedInstance.highScore.highScore = GameManagerArkanoid.sharedInstance.points;
+                    GameManagerArkanoid.sharedInstance.highScoreText.text = "HighScore: " + GameManagerArkanoid.sharedInstance.points.ToString();
                 }
                 Destroy(this.gameObject);
             }

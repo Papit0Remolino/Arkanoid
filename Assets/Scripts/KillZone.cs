@@ -8,8 +8,8 @@ public class KillZone : MonoBehaviour
     {
         if (collision.gameObject.name == "Ball")
         {
-            GameManager.sharedInstance.lives--;
-            collision.gameObject.GetComponent<Ball>().ResetBall();
+            GameManagerArkanoid.sharedInstance.lives--;
+            collision.gameObject.GetComponent<ArkanoidBall>().ResetBall();
         }
     }
 }

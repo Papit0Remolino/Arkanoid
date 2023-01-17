@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RacketMovement : MonoBehaviour
+public class RacketMovementArkanoid : MonoBehaviour
 {
     //Velocidad de la raqueta 
     public float racketSpeed = 25;

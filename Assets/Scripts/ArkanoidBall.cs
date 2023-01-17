@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ball : MonoBehaviour
+public class ArkanoidBall : MonoBehaviour
 {
     public float speed = 10;
     public Vector2 ballInit;
@@ -33,7 +33,7 @@ public class Ball : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         transform.position = ballInit;
         GetComponent<TrailRenderer>().emitting = true;
-        if (GameManager.sharedInstance.lives > 0)
+        if (GameManagerArkanoid.sharedInstance.lives > 0)
         {
             Invoke("RestartBallMovement", 2.0f);
         }
